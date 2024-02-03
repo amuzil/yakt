@@ -1,0 +1,27 @@
+[versions]
+kotest = "5.5.4"
+prettier = "2.8.1"
+prettier-toml = "0.3.1"
+
+[libraries]
+kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
+kotest-framework-datatest = { group = "io.kotest", name = "kotest-framework-datatest", version.ref = "kotest" }
+kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
+kotest-extensions-junitxml = { group = "io.kotest", name = "kotest-extensions-junitxml", version.ref = "kotest" }
+mockk = { group = "io.mockk", name = "mockk", version = "1.13.3" }
+
+[bundles]
+kotest = [
+	"kotest-runner-junit5",
+	"kotest-framework-datatest",
+	"kotest-assertions-core",
+	"kotest-property",
+	"kotest-extensions-junitxml"
+]
+
+[plugins]
+detekt = { id = "io.gitlab.arturbosch.detekt", version = "1.22.0" }
+kover = { id = "org.jetbrains.kotlinx.kover", version = "0.6.1" }
+sonarqube = { id = "org.sonarqube", version = "3.5.0.2730" }
+spotless = { id = "com.diffplug.spotless", version = "6.12.1" }

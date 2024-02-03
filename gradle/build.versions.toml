@@ -1,0 +1,21 @@
+[versions]
+java = "17"
+kotlin = "1.8.0"
+ktor = "2.2.2"
+
+[libraries]
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
+ktor-client-java = { group = "io.ktor", name = "ktor-client-java", version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+[bundles]
+ktor = [
+	"ktor-client-core",
+	"ktor-client-java",
+	"ktor-client-content-negotiation",
+	"ktor-serialization-kotlinx-json"
+]
+
+[plugins]
+shadow = { id = "com.github.johnrengelman.shadow", version = "7.1.2" }

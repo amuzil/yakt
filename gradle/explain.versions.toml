@@ -1,0 +1,9 @@
+[versions]
+
+[libraries]
+jackson-core = { group = "com.fasterxml.jackson.core", name = "jackson-databind", version = "2.14.1" }
+
+[bundles]
+
+[plugins]
+dokka = { id = "org.jetbrains.dokka", version = "1.7.20" }
